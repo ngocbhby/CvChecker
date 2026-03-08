@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: cv-checker
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+app:
+  storage:
+    upload-dir: ./uploads
+  security:
+    api-key: ${API_KEY:default-secret-key-change-in-prod}
