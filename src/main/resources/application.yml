@@ -4,6 +4,15 @@ server:
 spring:
   application:
     name: cv-checker
+  datasource:
+    url: jdbc:postgresql://localhost:5432/cv_checker
+    username: dev
+    password: Admin!12
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
   servlet:
     multipart:
       max-file-size: 10MB
