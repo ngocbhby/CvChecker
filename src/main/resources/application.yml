@@ -3,7 +3,16 @@ server:
 
 spring:
   application:
-    name: cv-checker
+    name: cvchecker
+  datasource:
+    url: jdbc:postgresql://localhost:5432/CVChecker
+    username: dev
+    password: Admin12!
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
   servlet:
     multipart:
       max-file-size: 10MB
@@ -13,4 +22,4 @@ app:
   storage:
     upload-dir: ./uploads
   security:
-    api-key: ${API_KEY:default-secret-key-change-in-prod}
+    api-key: ${API_KEY:Clodina+2u29hzb+rqSI6Rp7ey5c4VGLXxOfZiHVj6k=}
