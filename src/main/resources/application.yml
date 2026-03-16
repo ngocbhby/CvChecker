@@ -10,6 +10,7 @@ spring:
     password: Admin12!
     driver-class-name: org.postgresql.Driver
   jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
     show-sql: true
@@ -22,4 +23,7 @@ app:
   storage:
     upload-dir: ./uploads
   security:
-    api-key: ${API_KEY:Clodina+2u29hzb+rqSI6Rp7ey5c4VGLXxOfZiHVj6k=}
+    jwt:
+      # Nên override bằng biến môi trường APP_SECURITY_JWT_SECRET trong môi trường thật
+      secret: ${APP_SECURITY_JWT_SECRET:change-this-secret-to-a-long-random-string}
+      access-token-expiration-minutes: 30
